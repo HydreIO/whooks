@@ -14,6 +14,8 @@
 
 <h3 align=center>A Taiga.io webhook server for Discord built on KoaJS</h3>
 
+<img align="center" width="600" src="https://i.imgur.com/xFBPRHo.png">
+
 ## Configuration
 
 | variable              | default  | description                |
@@ -24,7 +26,7 @@
 | DISCORD_WEBHOOK_ID    | ``       | Discord webhook id         |
 | DISCORD_WEBHOOK_TOKEN | ``       | Discord webhook token      |
 
-> https://discordapp.com/api/webhooks/<id>/<token>
+> `https://discordapp.com/api/webhooks/<DISCORD_WEBHOOK_ID/<DISCORD_WEBHOOK_TOKEN>`
 
 ## Usage with Node
 
