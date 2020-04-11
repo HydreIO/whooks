@@ -12,7 +12,7 @@
   </a>
 </p>
 
-<h3 align=center>A taiga discord webhook server built on KoaJS</h3>
+<h3 align=center>A Taiga.io webhook server for Discord built on KoaJS</h3>
 
 ## Configuration
 
