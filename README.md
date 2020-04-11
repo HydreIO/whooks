@@ -13,3 +13,34 @@
 </p>
 
 <h3 align=center>A taiga discord webhook server built on KoaJS</h3>
+
+## Configuration
+
+| variable              | default  | description                |
+| --------------------- | -------- | -------------------------- |
+| PORT                  | `8080`   | Webhook service port       |
+| WEBHOOK_PATH          | `'/'`    | Webhook service http path  |
+| SECRET                | `'none'` | Webhook service secret key |
+| DISCORD_WEBHOOK_ID    | ``       | Discord webhook id         |
+| DISCORD_WEBHOOK_TOKEN | ``       | Discord webhook token      |
+
+> https://discordapp.com/api/webhooks/<id>/<token>
+
+## Usage with Node
+
+```sh
+npm i
+DEBUG="whooks*" \
+  DISCORD_WEBHOOK_ID="xxxx" \
+  DISCORD_WEBHOOK_TOKEN="xxxx" \
+  npm run start
+```
+
+## Usage with Docker
+```sh
+docker run -t -p8080:8080 \
+  -e DEBUG="whooks*" \
+  -e DISCORD_WEBHOOK_ID="xxxx" \
+  -e DISCORD_WEBHOOK_TOKEN="xxxx" \
+  hydre/whooks
+```

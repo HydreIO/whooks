@@ -5,7 +5,7 @@ import Router from 'koa-router'
 import { middleware as taiga_middleware, emitter } from './taiga'
 import discord_listener from './discord'
 
-const { PORT = 9600, WEBHOOK_PATH = '/', DISCORD_WEBHOOK_ID, DISCORD_WEBHOOK_TOKEN } = process.env
+const { PORT = 8080, WEBHOOK_PATH = '/', DISCORD_WEBHOOK_ID, DISCORD_WEBHOOK_TOKEN } = process.env
 const log = debug('whooks')
 const router = new Router()
 
