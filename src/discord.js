@@ -8,8 +8,8 @@ export default ({ webhook_id, webhook_token, hook }) => {
   if (!webhook_token) throw new Error('Missing webhook token')
   const client = new Discord.WebhookClient(webhook_id, webhook_token)
 
-  hook.on('test:test', payload => {
-    client.send({
+  hook.on('test:test', async payload => {
+    await client.send({
       username: 'Taiga',
       avatarURL: 'https://cdn.discordapp.com/attachments/596130529129005056/596406037859401738/favicon.png',
       embeds: [{
