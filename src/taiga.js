@@ -18,6 +18,7 @@ export const middleware = (ctx, next) => {
   }
   const { action, type, ...payload } = ctx.request.body
   emitter.emit(`${type}:${action}`, payload)
+  ctx.body = 'Bip bop'
 }
 
 export { emitter }
