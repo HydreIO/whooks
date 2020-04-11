@@ -1,0 +1,27 @@
+{
+  "name": "@hydre/whooks",
+  "version": "1.0.0",
+  "description": "A taiga discord webhook server",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --harmony --experimental-specifier-resolution=node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HydreIO/whooks.git"
+  },
+  "author": "Hydre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HydreIO/whooks/issues"
+  },
+  "homepage": "https://github.com/HydreIO/whooks#readme",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "discord.js": "^12.1.1",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^8.0.8"
+  }
+}
