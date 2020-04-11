@@ -6,7 +6,7 @@ const log = debug('whooks')
 const { SECRET = 'none' } = process.env
 const emitter = new Emitter()
 
-const verify_signature = (data, signature) => {
+const verify_signature = (data = '', signature = '') => {
   const hmac = crypto.createHmac('sha1', SECRET)
   return hmac.update(data).digest('hex') === signature
 }
