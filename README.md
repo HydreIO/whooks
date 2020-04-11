@@ -14,7 +14,7 @@
 
 <h3 align=center>A Taiga.io webhook server for Discord built on KoaJS</h3>
 
-<img align="center" width="600" src="https://i.imgur.com/xFBPRHo.png">
+<img align="center" src="https://i.imgur.com/xFBPRHo.png">
 
 ## Configuration
 
