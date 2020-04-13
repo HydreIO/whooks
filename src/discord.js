@@ -24,4 +24,21 @@ export default ({ webhook_id, webhook_token, hook }) => {
       }]
     })
   })
+
+  hook.on('issue:create', payload => {
+    client.send({
+      username: 'Taiga',
+      avatarURL: 'https://cdn.discordapp.com/attachments/596130529129005056/596406037859401738/favicon.png',
+      embeds: [{
+        "title": "Test",
+        "description": "Testing discord hook",
+        "color": 7948483,
+        "author": {
+          "name": payload?.by?.full_name,
+          "url": payload?.by?.permalink,
+          "icon_url": payload?.by?.photo
+        }
+      }]
+    })
+  })
 }
