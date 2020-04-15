@@ -18,7 +18,7 @@ router
 new Koa()
   .use(Body())
   .use((ctx, next) => {
-    const [, signature] = Object.entries(ctx.headers).find(([k, v]) => k.toLowerCase() === 'x-taiga-webhook-signature') || []
+    const [, signature] = Object.entries(ctx.headers).find(([k]) => k.toLowerCase() === 'x-taiga-webhook-signature') || []
     if (!signature) {
       ctx.body = 'Be gone thot'
       return
