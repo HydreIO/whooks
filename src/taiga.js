@@ -11,14 +11,14 @@ const verify_signature = (data = '', signature = '') => {
   return hmac.update(data).digest('hex') === signature
 }
 
-export const middleware = (ctx, next) => {
-  if (!verify_signature(ctx.request.rawBody, ctx.taiga_signature)) {
+export const middleware = context => {
+  if (!verify_signature(context.request.rawBody, context.taiga_signature)) {
     log('Bad signature, ignoring request.')
     return
   }
-  const { action, type, ...payload } = ctx.request.body
+  const { action, type, ...payload } = context.request.body
   emitter.emit(`${type}:${action}`, payload)
-  ctx.body = 'Bip bop'
+  context.body = 'Bip bop'
 }
 
 export { emitter }

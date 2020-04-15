@@ -1,7 +1,7 @@
+// import debug from 'debug'
 import Discord from 'discord.js'
-import debug from 'debug'
 
-const log = debug('whooks')
+// const log = debug('whooks')
 
 export default ({ webhook_id, webhook_token, hook }) => {
   if (!webhook_id) throw new Error('Missing webhook id')
@@ -13,32 +13,15 @@ export default ({ webhook_id, webhook_token, hook }) => {
       username: 'Taiga',
       avatarURL: 'https://cdn.discordapp.com/attachments/596130529129005056/596406037859401738/favicon.png',
       embeds: [{
-        "title": "Test",
-        "description": "Testing discord hook",
-        "color": 7948483,
-        "author": {
-          "name": payload?.by?.full_name,
-          "url": payload?.by?.permalink,
-          "icon_url": payload?.by?.photo
-        }
-      }]
-    })
-  })
-
-  hook.on('issue:create', payload => {
-    client.send({
-      username: 'Taiga',
-      avatarURL: 'https://cdn.discordapp.com/attachments/596130529129005056/596406037859401738/favicon.png',
-      embeds: [{
-        "title": "Test",
-        "description": "Testing discord hook",
-        "color": 7948483,
-        "author": {
-          "name": payload?.by?.full_name,
-          "url": payload?.by?.permalink,
-          "icon_url": payload?.by?.photo
-        }
-      }]
+        title: 'Test',
+        description: 'Testing discord hook',
+        color: 7948483,
+        author: {
+          name: payload?.by?.full_name,
+          url: payload?.by?.permalink,
+          icon_url: payload?.by?.photo,
+        },
+      }],
     })
   })
 }
